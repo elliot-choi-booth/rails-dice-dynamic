@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
-  get("/dice/2/6", :controller => "dice_controller", :action => "two_six") do
+  
+  get("/dice/2/6", :controller => "dice", :action => "two_six")
+
+  get("/dice/2/10", :controller => "dice", :action => "two_ten")
+
+  get("/dice/1/20", :controller => "dice", :action => "one_twenty")
+
+  get("/dice/5/4", :controller => "dice", :action => "five_four")
+
+  get("/", :controller => "dice", :action => "home")
+
+  get("/dice/:param_one/:param_two", :controller => "dice", :action => "d1_d2")
     
 end
