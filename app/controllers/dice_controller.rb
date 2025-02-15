@@ -24,6 +24,14 @@ class DiceController < ApplicationController
     @param_one = params.fetch("param_one").to_i
     @param_two = params.fetch("param_two").to_i
 
+    @rolls = []
+
+    @param_one.times do
+      die = rand(1..@param_two)
+
+      @rolls.push(die)
+    end
+
     render({ :template => "dice_templates/d1_d2"})
 
   end

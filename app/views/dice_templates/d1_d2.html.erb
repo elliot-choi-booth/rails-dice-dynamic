@@ -1,5 +1,9 @@
-<%= params =%>
-
 <h1><%= @param_one =%>d<%= @param_two =%></h1>
 
-
+<ul>
+ <% @rolls.each do |a_roll|%>
+ <li>
+  <%= a_roll =%>
+ </li>
+ <% end %>
+</ul>
